@@ -117,6 +117,7 @@ Capybara.register_driver :selenium do |app|
 end
 
 Capybara.configure do |capybara|
+  capybara.app_host = 'http://example.selenium.jp'
   capybara.default_driver = :selenium
   capybara.ignore_hidden_elements = false
 end

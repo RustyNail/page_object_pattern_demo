@@ -1,11 +1,8 @@
-class ReservationForm < SitePrism::Page
+require_relative 'layout'
+
+class ReservationForm < Layout
   set_url '/reserveApp_Renewal/index.html'
 
-  element :brand_button, ".brand[href='index.html']"
-  section :nav, '.nav' do
-    element :home_button, "[href='index.html']"
-  end
-  element :page_title, '.container > h1'
   section :reserve_form, '#reserve_info' do
     element :reserve_date, '#datePick'
     element :reserve_term, '#reserve_term'

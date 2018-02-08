@@ -1,11 +1,8 @@
-class ReservationConfirm < SitePrism::Page
+require_relative 'layout'
+
+class ReservationConfirm < Layout
   set_url '/reserveApp_Renewal/check_info.html{?query*}'
 
-  element :brand_button, ".brand[href='index.html']"
-  section :nav, '.nav' do
-    element :home_button, "[href='index.html']"
-  end
-  element :page_title, '.container > h1'
   element :back_button, '#returnto_index'
   section :billing, '#billing' do
     element :total, '#total'
@@ -33,12 +30,6 @@ class ReservationConfirm < SitePrism::Page
   class ReservationError < self
     set_url '/reserveApp_Renewal/check_info.html{?query*}'
 
-    element :brand_button, ".brand[href='index.html']"
-    section :nav, '.nav' do
-      element :home_button, "[href='index.html']"
-    end 
-    element :page_title, '.container > h1'
-    element :back_button, '#returnto_index'
     element :error_message, '#errorcheck_result'
   end
 end

@@ -38,3 +38,8 @@ cd page_object_pattern_demo
 docker-compose build
 docker-compose run --rm test
 ```
+## Rubocop
+
+```bash
+docker-compose run --rm test bundle ex rubocop
+```

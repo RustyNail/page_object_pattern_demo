@@ -15,7 +15,7 @@ RSpec.describe 'Reservation form feature' do
     describe 'and inputting reservation information' do
       let(:confirm_reservation_page) { ReservationConfirm.new }
       let(:reservation_error_page) { ReservationConfirm::ReservationError.new }
-      let(:params) { {} } 
+      let(:params) { {} }
       subject do
         super()
         reservation_form_page.reserve(params)

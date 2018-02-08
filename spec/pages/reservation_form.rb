@@ -7,8 +7,8 @@ class ReservationForm < Layout
     element :reserve_date, '#datePick'
     element :reserve_term, '#reserve_term'
     element :headcount, '#headcount'
-    element :breakfast_on, "#breakfast_on"
-    element :breakfast_off, "#breakfast_off"
+    element :breakfast_on, '#breakfast_on'
+    element :breakfast_off, '#breakfast_off'
     element :plan_a, '#plan_a'
     element :plan_b, '#plan_b'
     element :plan_detail_link, '#plan_b+br+a'
@@ -46,18 +46,17 @@ class ReservationForm < Layout
     }
     reserve_params.merge!(params)
     reserve_form.input_elements.each do |key|
-      unless reserve_params[key].nil?
-        case key
-        when :reserve_term, :headcount
-          reserve_form.send(key).find("option[value='#{reserve_params[key]}']").select_option
-        when :reserve_date
-          reserve_form.send(key).set(reserve_params[key])
-          page.execute_script("$('.datepicker').hide()")
-        when :breakfast
-          reserve_form.send(reserve_params[key] ? :breakfast_on : :breakfast_off).set(true)
-        else
-          reserve_form.send(key).set(reserve_params[key])
-        end
+      next if reserve_params[key].nil?
+      case key
+      when :reserve_term, :headcount
+        reserve_form.send(key).find("option[value='#{reserve_params[key]}']").select_option
+      when :reserve_date
+        reserve_form.send(key).set(reserve_params[key])
+        page.execute_script("$('.datepicker').hide()")
+      when :breakfast
+        reserve_form.send(reserve_params[key] ? :breakfast_on : :breakfast_off).set(true)
+      else
+        reserve_form.send(key).set(reserve_params[key])
       end
     end
     reserve_form.agree_and_goto_next.click

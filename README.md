@@ -1,6 +1,8 @@
 # page_object_pattern_demo
 Made a sample of page object pattern test using some library.
 
+[![Build Status](https://travis-ci.org/RustyNail/page_object_pattern_demo.svg?branch=master)](https://travis-ci.org/RustyNail/page_object_pattern_demo)
+
 ## Test Contents
 - Test site : http://example.selenium.jp/reserveApp_Renewal
 - Test Pages

@@ -1,0 +1,7 @@
+language: ruby
+services: docker
+before_install:
+  - docker-compose build
+script:
+  - docker-compose run test bundle ex rubocop
+  - docker-compose run test

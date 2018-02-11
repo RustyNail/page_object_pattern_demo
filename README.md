@@ -5,17 +5,28 @@
 Made a sample of page object pattern test using some library.
 
 ## Test Contents
-- Test site : http://example.selenium.jp/reserveApp_Renewal
-- Test Pages
-  - ![Reservation form page](./images/reservation_page.png)
-  - ![Reservation comfirm page](./images/reservation_confirm_page.png)
-  - ![Reservation confirm error page](./images/reservation_confirm_error_page.png)
-  - ![Reservation completed page](./images/reservation_completed.png)
-- Library to be used for testing
-  - [RSpec](https://github.com/rspec/rspec)
-  - [Capyabara](https://github.com/teamcapybara/capybara)
-  - [selenium-webdriver](https://github.com/SeleniumHQ/selenium/tree/master/rb)
-  - [SitePrism](https://github.com/natritmeyer/site_prism)
+
+#### Test site
+http://example.selenium.jp/reserveApp_Renewal
+
+#### Test Pages
+Reservation form page
+![Reservation form page](./images/reservation_page.png)
+
+Reservation comfirm page
+![Reservation comfirm page](./images/reservation_confirm_page.png)
+
+Reservation confirm error page
+![Reservation confirm error page](./images/reservation_confirm_error_page.png)
+
+Reservation completed page
+![Reservation completed page](./images/reservation_completed.png)
+
+#### Library to be used for testing
+- [RSpec](https://github.com/rspec/rspec)
+- [Capyabara](https://github.com/teamcapybara/capybara)
+- [selenium-webdriver](https://github.com/SeleniumHQ/selenium/tree/master/rb)
+- [SitePrism](https://github.com/natritmeyer/site_prism)
 
 ## Prepare
 
@@ -42,7 +53,7 @@ cd page_object_pattern_demo
 docker-compose build
 docker-compose run --rm test
 ```
-## Rubocop
+## Run Rubocop
 
 ```bash
 docker-compose run --rm test bundle ex rubocop

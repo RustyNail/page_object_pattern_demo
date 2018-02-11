@@ -3,7 +3,7 @@ cache: bundler
 dist: trusty
 language: ruby
 services: docker
-before_install:
+before_script:
   - docker-compose build
 script:
   - docker-compose run test bundle ex rubocop

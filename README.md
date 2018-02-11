@@ -7,9 +7,10 @@ Made a sample of page object pattern test using some library.
 ## Test Contents
 - Test site : http://example.selenium.jp/reserveApp_Renewal
 - Test Pages
-  - [Reservation form page](http://example.selenium.jp/reserveApp_Renewal/index.html)
-  - [Reservation comfirm page](http://example.selenium.jp/reserveApp_Renewal/check_info.html)
-  - [Reservation completed page](http://example.selenium.jp/reserveApp_Renewal/final_confirm.html)
+  - ![Reservation form page](./images/reservation_page.png)
+  - ![Reservation comfirm page](./images/reservation_confirm_page.png)
+  - ![Reservation confirm error page](./images/reservation_confirm_error_page.png)
+  - ![Reservation completed page](./images/reservation_completed.png)
 - Library to be used for testing
   - [RSpec](https://github.com/rspec/rspec)
   - [Capyabara](https://github.com/teamcapybara/capybara)

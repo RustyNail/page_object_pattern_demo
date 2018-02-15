@@ -9,8 +9,10 @@ RSpec.describe 'Reservation completed feature' do
     example do
       subject
       expect(reservation_completed_page).to be_displayed & be_all_there
-      expect(reservation_completed_page.title).to eq '予約完了'
-      expect(reservation_completed_page.page_title.text).to eq '予約を完了しました'
+      expect(reservation_completed_page.page_title).to include(
+        title:   '予約完了',
+        heading: '予約を完了しました'
+      )
       expect(reservation_completed_page.message.text).to include 'ご来館、心よりお待ちしております。'
     end
 

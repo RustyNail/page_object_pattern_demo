@@ -18,7 +18,7 @@ RSpec.describe 'Reservation comfirm feature' do
       it 'should be displayed reservation detail' do
         subject
         expected_reserve_date = Date.today.next_day
-        expected_total = expected_reserve_date.sunday? || expected_reserve_date.sunday? ? '11750' : '10000'
+        expected_total = expected_reserve_date.saturday? || expected_reserve_date.sunday? ? '11750' : '10000'
         expect(confirm_reservation_page.billing.detail).to eq(
           total: "合計 #{expected_total}円(税込み)",
           price_detail: '(おひとり様1泊7000円～、土日は25%アップ) 料金詳細を確認',

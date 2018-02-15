@@ -10,8 +10,10 @@ RSpec.describe 'Reservation comfirm feature' do
     example do
       subject
       expect(confirm_reservation_page).to be_displayed & be_all_there
-      expect(confirm_reservation_page.title).to eq '予約内容確認'
-      expect(confirm_reservation_page.page_title.text).to eq '予約内容'
+      expect(confirm_reservation_page.page_title).to include(
+        title:   '予約内容確認',
+        heading: '予約内容'
+      )
     end
 
     describe 'and inputting reservation information' do

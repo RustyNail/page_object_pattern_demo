@@ -9,9 +9,11 @@ RSpec.describe 'Reservation error feature' do
     example do
       subject
       expect(reservation_error_page).to be_displayed & be_all_there
+      expect(reservation_error_page.page_title).to include(
+        title:   '予約エラー',
+        heading: '予約エラー'
+      )
       expect(reservation_error_page.error_message.text).to eq '年月日、期間、人数いずれかの値が半角英数の範囲外です'
-      expect(reservation_error_page.title).to eq '予約エラー'
-      expect(reservation_error_page.page_title.text).to eq '予約エラー'
     end
 
     context 'when returning to reservation form' do

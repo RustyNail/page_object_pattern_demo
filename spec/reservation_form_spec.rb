@@ -8,8 +8,10 @@ RSpec.describe 'Reservation form feature' do
     example do
       subject
       expect(reservation_form_page).to be_displayed & be_all_there
-      expect(reservation_form_page.title).to eq '予約情報入力'
-      expect(reservation_form_page.page_title.text).to eq '予約フォーム'
+      expect(reservation_form_page.page_title).to include(
+        title:   '予約情報入力',
+        heading: '予約フォーム'
+      )
     end
 
     describe 'and inputting reservation information' do

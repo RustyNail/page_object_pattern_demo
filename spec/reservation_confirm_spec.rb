@@ -38,7 +38,7 @@ RSpec.describe 'Reservation comfirm feature' do
           super()
           confirm_reservation_page.back_button.click
         end
-        it 'should be remine inputting contnts in reservation form' do
+        it 'should be remine inputting contents in reservation form' do
           subject
           # Firefox retains inputted day, but chrome returns to today.
           expected_reserve_date = Date.today

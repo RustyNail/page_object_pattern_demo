@@ -44,18 +44,20 @@ RSpec.describe 'Reservation feature' do
       it 'should displayed reservation form page' do
         expect(URI.parse(@driver.current_url).path).to eq '/reserveApp_Renewal/index.html'
         expect(@driver.title).to eq '予約情報入力'
-        expect(@driver.find_elements(css: '#datePick').size).to be > 0
-        expect(@driver.find_elements(css: '#reserve_term').size).to be > 0
-        expect(@driver.find_elements(css: '#headcount').size).to be > 0
-        expect(@driver.find_elements(css: '#breakfast_on').size).to be > 0
-        expect(@driver.find_elements(css: '#breakfast_off').size).to be > 0
-        expect(@driver.find_elements(css: '#plan_a').size).to be > 0
-        expect(@driver.find_elements(css: '#plan_b').size).to be > 0
-        expect(@driver.find_elements(css: '#plan_b+br+a').size).to be > 0
-        expect(@driver.find_elements(css: '#guestname').size).to be > 0
-        expect(@driver.find_elements(css: '#guestname+hr+a').size).to be > 0
-        expect(@driver.find_elements(css: '#agree_and_goto_next').size).to be > 0
-        expect(@driver.find_elements(css: '#disagree').size).to be > 0
+        aggregate_failures do
+          expect(@driver.find_elements(css: '#datePick')).to be_one
+          expect(@driver.find_elements(css: '#reserve_term')).to be_one
+          expect(@driver.find_elements(css: '#headcount')).to be_one
+          expect(@driver.find_elements(css: '#breakfast_on')).to be_one
+          expect(@driver.find_elements(css: '#breakfast_off')).to be_one
+          expect(@driver.find_elements(css: '#plan_a')).to be_one
+          expect(@driver.find_elements(css: '#plan_b')).to be_one
+          expect(@driver.find_elements(css: '#plan_b+br+a')).to be_one
+          expect(@driver.find_elements(css: '#guestname')).to be_one
+          expect(@driver.find_elements(css: '#guestname+hr+a')).to be_one
+          expect(@driver.find_elements(css: '#agree_and_goto_next')).to be_one
+          expect(@driver.find_elements(css: '#disagree')).to be_one
+        end
       end
     end
 

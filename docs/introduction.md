@@ -43,8 +43,8 @@ Docker環境でテストを実行します。
 
 ### 特定のテストを実行
 
-実行したいテストにフォーカスを当てると単体で実行できます。
-- Ex) `fdescribe`, `fcontext`
+`describe|context|it` の先頭に `f` を付けることにより、特定の `it|describe|context|it` を実行できます
+- Ex) `fdescribe`, `fcontext`, `fit`
 
 ### Capybaraのhostにテスト用サイトを設定済み
 

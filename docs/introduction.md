@@ -1,7 +1,9 @@
 # はじめに
 
 前半は、Seleniumの入門としてSelenium/Capybaraを使ったテストについて説明します。
+
 後半では、テストのメンテナンス効率をあげるための技法「ページオブジェクトデザインパターン」の習得を目指し、
+
 既存のコードに適用していきます。
 
 # チュートリアルで用意されているテストについて
@@ -42,17 +44,18 @@ Docker環境でテストを実行します。
 ### 特定のテストを実行
 
 実行したいテストにフォーカスを当てると単体で実行できます。
-Ex) `fdescribe`, `fcontext`
+- Ex) `fdescribe`, `fcontext`
 
-### Capybaraのhostに設定済み
+### Capybaraのhostにテスト用サイトを設定済み
+
 http://example.selenium.jp をホストに設定しているため、相対パスでアクセスできます。
 
 ### スクリーンショットの取得
 
 以下のコマンドでスクリーンショットを取得できます。
-Ex) `page.save_screenshot 'xxx.png'`
+- Ex) `page.save_screenshot 'xxx.png'`
 
 ### rubocopを実行
 
 以下のコマンドでrubocopを実行できます。
-`docker-compose run --rm test bundle ex rubocop`
+- `docker-compose run --rm test bundle ex rubocop`

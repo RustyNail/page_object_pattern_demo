@@ -41,7 +41,7 @@ Docker環境でテストを実行します。
 
 ### 特定のテストを実行
 
-`describe|context|it` の先頭に `f` を付けることにより、特定の `it|describe|context|it` を実行できます
+`describe` `context` `it` の先頭に `f` を付けることにより、特定の `describe` `context` `it` を実行できます
 - Ex) `fdescribe`, `fcontext`, `fit`
 
 ### Capybara.app_host にテスト用サイトのスキーマ、ホスト名 http://example.selenium.jp/ を指定

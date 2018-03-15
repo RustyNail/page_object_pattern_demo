@@ -17,14 +17,12 @@
 
 ## テストで使用するライブラリ
 
-- rspec
-  - Rubyのテストフレームワーク
-- selenium-webdriver
-  - Webアプリケーションのテスト自動化をサポートするツール
-- capybara
-  - WebアプリケーションのE2Eテストフレームワーク
-- site_prism
-  - ページオブジェクトデザインパターンのテストの作成をサポートする
+ライブラリ|概要|ドキュメント
+---|---|---
+[RSpec](http://rspec.info/)|Rubyのテストフレームワーク|http://rspec.info/documentation/ https://relishapp.com/rspec
+[Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)|Webアプリケーションのテスト自動化をサポートするツール|https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings http://seleniumhq.github.io/selenium/docs/api/rb/index.html
+[Capybara](http://teamcapybara.github.io/capybara/)|WebアプリケーションのE2Eテストフレームワーク|http://www.rubydoc.info/github/teamcapybara/capybara/master
+[SitePrism](https://github.com/natritmeyer/site_prism)|ページオブジェクトデザインパターンのテストの作成をサポートする|http://www.rubydoc.info/gems/site_prism/frames
 
 ## テストで使用するブラウザ
 
@@ -43,7 +41,7 @@ Docker環境でテストを実行します。
 
 ### 特定のテストを実行
 
-`describe|context|it` の先頭に `f` を付けることにより、特定の `it|describe|context|it` を実行できます
+`describe` `context` `it` の先頭に `f` を付けることにより、特定の `describe` `context` `it` を実行できます
 - Ex) `fdescribe`, `fcontext`, `fit`
 
 ### Capybara.app_host にテスト用サイトのスキーマ、ホスト名 http://example.selenium.jp/ を指定

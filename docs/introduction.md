@@ -17,12 +17,12 @@
 
 ## テストで使用するライブラリ
 
-ライブラリ|概要|公式サイト|ドキュメント
----|---|---|---
-RSpec|Rubyのテストフレームワーク|[RSpec: Behaviour Driven Development for Ruby](http://rspec.info/)|http://rspec.info/documentation/ https://relishapp.com/rspec
-Selenium WebDriver|Webアプリケーションのテスト自動化をサポートするツール|[Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)|https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings http://seleniumhq.github.io/selenium/docs/api/rb/index.html
-Capybara|WebアプリケーションのE2Eテストフレームワーク|[Capybara](http://teamcapybara.github.io/capybara/)|http://www.rubydoc.info/github/teamcapybara/capybara/master
-SitePrism|ページオブジェクトデザインパターンのテストの作成をサポートする|[natritmeyer/site_prism: A Page Object Model DSL for Capybara](https://github.com/natritmeyer/site_prism)|http://www.rubydoc.info/gems/site_prism/frames
+ライブラリ|概要|ドキュメント
+---|---|---
+[RSpec](http://rspec.info/)|Rubyのテストフレームワーク|http://rspec.info/documentation/ https://relishapp.com/rspec
+[Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)|Webアプリケーションのテスト自動化をサポートするツール|https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings http://seleniumhq.github.io/selenium/docs/api/rb/index.html
+[Capybara](http://teamcapybara.github.io/capybara/)|WebアプリケーションのE2Eテストフレームワーク|http://www.rubydoc.info/github/teamcapybara/capybara/master
+[SitePrism](https://github.com/natritmeyer/site_prism)|ページオブジェクトデザインパターンのテストの作成をサポートする|http://www.rubydoc.info/gems/site_prism/frames
 
 ## テストで使用するブラウザ
 

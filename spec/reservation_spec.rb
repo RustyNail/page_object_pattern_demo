@@ -30,6 +30,14 @@ RSpec.describe 'Reservation feature' do
       include_examples 'displayed the reservation form'
     end
 
+    ## Use capybara
+    context 'when click on brand button' do
+      before { visit reservation_form_page_url }
+      subject { find(".brand[href='index.html']").click }
+
+      include_examples 'displayed the reservation form'
+    end
+
     ## Use selenium webdriver only
     context 'when click on home button' do
       before do
@@ -59,14 +67,6 @@ RSpec.describe 'Reservation feature' do
           expect(@driver.find_elements(css: '#disagree')).to be_one
         end
       end
-    end
-
-    ## Also use capybara
-    context 'when click on brand button' do
-      before { visit reservation_form_page_url }
-      subject { find(".brand[href='index.html']").click }
-
-      include_examples 'displayed the reservation form'
     end
   end
 

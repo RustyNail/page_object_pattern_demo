@@ -29,7 +29,7 @@ RSpec.describe 'Reservation error feature' do
       context 'with home button' do
         example do
           subject
-          reservation_error_page.nav.home_button.click
+          reservation_error_page.home_button.click
           expect(reservation_form_page).to be_displayed
         end
       end

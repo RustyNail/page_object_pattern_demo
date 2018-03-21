@@ -20,7 +20,7 @@ RSpec.describe 'Reservation completed feature' do
       context 'with home button' do
         example do
           subject
-          reservation_completed_page.nav.home_button.click
+          reservation_completed_page.home_button.click
           expect(reservation_form_page).to be_displayed
         end
       end

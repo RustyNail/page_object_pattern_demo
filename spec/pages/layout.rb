@@ -1,8 +1,6 @@
 class Layout < SitePrism::Page
   element :brand_button, ".brand[href='index.html']"
-  section :nav, '.nav' do
-    element :home_button, "[href='index.html']"
-  end
+  element :home_button, ".nav [href='index.html']"
   element :page_heading, '.container > h1'
 
   def page_title

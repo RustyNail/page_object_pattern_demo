@@ -93,7 +93,7 @@ describe 'visiting reservation form page' do
   context 'when visiting reservation form' do
 ```
 
-# [演習3] ページオブジェクトにメソッドを定義してみましょう
+# [演習3] ページオブジェクトにメソッドを定義しましょう
 
 ページオブジェクトにメソッドを定義して、以下のテストコードを修正しましょう。
 
@@ -105,9 +105,9 @@ describe 'visiting reservation form page' do
 
 # [演習4] 期待通りに動かないテストへのアプローチ
 
-Selenumを使ったテストでは書いているコードは正しそうなのに期待通りに動作しないということがあります。
+Seleniumを使ったテストでは書いているコードは正しそうなのに期待通りに動作しないということがあります。
 
-まずは、原因を見つけルところから始めてテストが成功するようにテストコードを修正しましょう。
+原因を見つけてテストが成功するようにテストコードを修正しましょう。
 
 ```
 xdescribe 'inputting reservation information' do

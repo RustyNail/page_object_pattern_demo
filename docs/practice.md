@@ -19,7 +19,7 @@ class Google < SitePrism::Page
 end
 
 class GoogleSearchResult < SitePrism::Page
-  set_url_matcher /https:\/\/www.google.co.jp\/search\?.*/
+  set_url_matcher %r{https://www.google.co.jp/search\?.*}
 
   element :search_field, '[name="q"]'
 end

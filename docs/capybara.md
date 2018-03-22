@@ -18,7 +18,20 @@ CapybaraのImplicit Waitのデフォルトの時間は2秒です。
 
 ### 豊富な要素操作メソッド
 
-- テキスト/プルダウン/チェックボックス/ラジオボタン
+Capybaraでは、次のような要素を便利に操作するためのメソッドが利用できます。
+
+- テキスト
+  - `Capybara::Node::Actions#fill_in`
+    - 例: `page.fill_in 'Name', with: 'foobar'`
+- プルダウン
+  - `Capybara::Node::Actions#select`
+    - 例: `page.select 'Group 1', from: 'groups'`
+- チェックボックス
+  - `Capybara::Node::Actions#check`
+    - 例: `page.check 'Accept'`
+- ラジオボタン
+  - `Capybara::Node::Actions#choose`
+    - 例: `page.choose 'Yes'`
 
 ### 豊富なMatchers
 

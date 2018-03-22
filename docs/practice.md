@@ -27,9 +27,8 @@ end
 ## Test Code
 let(:google) { Google.new }
 before { google.load }
-subject { google.search 'site_prism' }
 example do
-  subject
+  google.search 'site_prism'
   expect(GoogleSearchResult.new).to be_displayed & be_all_there
 end
 ```

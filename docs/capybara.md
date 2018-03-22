@@ -4,12 +4,6 @@ WebアプリケーションのE2EテストフレームワークであるCapybara
 
 ## Capybaraの利点
 
-### ドライバ
-
-Capybaraが内部的に利用するWebアプリケーション操作のライブラリをドライバと呼びます。
-Capybaraは、Selenium WebDriver以外のドライバに差し替えることも可能です。
-
-
 ### Implicit Wait
 
 Capybaraは、次のようなImplicit Wait (暗黙的な待機)の仕組みがあります。

@@ -8,11 +8,13 @@ WebアプリケーションのE2EテストフレームワークであるCapybara
 
 Capybaraは、次のようなImplicit Wait (暗黙的な待機)の仕組みがあります。
 
-- `Capybara.using_wait_time(sec)`
-  - 要素が見つかるまで待機
-  - Matcherが成功するまで待機
+- 要素が見つかるまで待機
+- Matcherが成功するまで待機
 
-明示的に待機処理を書く必要がないため、画面上の要素変更にも簡単に対応することができます。
+CapybaraのImplicit Waitのデフォルトの時間は2秒です。
+デフォルトの時間以外に変更する場合 `Capybara.using_wait_time(sec)` を利用します。
+
+`Kernel.#sleep` や `Selenium::WebDriver::Wait` のような明示的な待機処理を書く必要がないため、画面上の要素変更にも簡単に対応することができます。
 
 ### 豊富な要素操作メソッド
 

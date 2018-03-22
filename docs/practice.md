@@ -4,7 +4,7 @@
 
 Googleの検索サイト (https://www.google.co.jp/) をテストサイトとした以下のサンプルコードを参考にして進めてください。
 
-```
+```ruby
 ## Page Object
 class Google < SitePrism::Page
   set_url 'https://www.google.co.jp/'
@@ -64,7 +64,7 @@ end
 
 Ex)
 
-```
+```ruby
 class Hoge < SitePrism::Page
   section :menu, MenuSection, "#menu"
 end
@@ -88,7 +88,7 @@ end
 
 `spec/reservation_spec.rb` の1つ目のテストコードを修正しましょう。
 
-```
+```ruby
 describe 'visiting reservation form page' do
   context 'when visiting reservation form' do
 ```
@@ -97,7 +97,7 @@ describe 'visiting reservation form page' do
 
 ページオブジェクトにメソッドを定義して、以下のテストコードを修正しましょう。
 
-```
+```ruby
 describe 'visiting reservation form page' do
   ## Use capybara
   context 'when click on brand button' do
@@ -109,6 +109,6 @@ Seleniumを使ったテストでは書いているコードは正しそうなの
 
 原因を見つけてテストが成功するようにテストコードを修正しましょう。
 
-```
+```ruby
 xdescribe 'inputting reservation information' do
 ```

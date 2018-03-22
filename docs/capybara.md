@@ -35,8 +35,14 @@ Capybaraでは、次のような要素を便利に操作するためのメソッ
 
 ### 豊富なMatchers
 
+Capybaradには、RSpecのexpectメソッドと組み合わせて使えるいくつかのメソッドがあります。
+
 - [Module: Capybara::RSpecMatchers — Documentation for jnicklas/capybara (master)](http://www.rubydoc.info/github/jnicklas/capybara/Capybara/RSpecMatchers)
-- have_cssなど
+  - `have_css`
+    - 例: `it { expect(page).to have_css('form#account') }`
+  - `have_content`
+  - `have_text`
+    - 例: `it { expect(page.find('label[for="Name"]')).to have_text('foobar') }`
 
 ## 参考文献
 

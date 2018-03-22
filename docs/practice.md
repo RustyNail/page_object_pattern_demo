@@ -9,8 +9,8 @@ Googleの検索サイト (https://www.google.co.jp/) をテストサイトとし
 class Google < SitePrism::Page
   set_url 'https://www.google.co.jp/'
 
-  element :search_field, '[aria-label="検索"]'
-  element :search_button, 'input[aria-label="Google 検索"]'
+  element :search_field, '[name="q"]'
+  element :search_button, '[name="btnK"]'
 
   def search(value = '')
     search_field.set value
@@ -21,7 +21,7 @@ end
 class GoogleSearchResult < SitePrism::Page
   set_url_matcher /https:\/\/www.google.co.jp\/search\?.*/
 
-  element :search_field, '[aria-label="検索"]'
+  element :search_field, '[name="q"]'
 end
 
 ## Test Code

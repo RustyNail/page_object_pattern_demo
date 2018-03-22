@@ -30,6 +30,14 @@ RSpec.describe 'Reservation feature' do
       include_examples 'displayed the reservation form'
     end
 
+    ## Use capybara
+    context 'when click on brand button' do
+      before { visit reservation_form_page_url }
+      subject { find(".brand[href='index.html']").click }
+
+      include_examples 'displayed the reservation form'
+    end
+
     ## Use selenium webdriver only
     context 'when click on home button' do
       before do
@@ -60,17 +68,9 @@ RSpec.describe 'Reservation feature' do
         end
       end
     end
-
-    ## Also use capybara
-    context 'when click on brand button' do
-      before { visit reservation_form_page_url }
-      subject { find(".brand[href='index.html']").click }
-
-      include_examples 'displayed the reservation form'
-    end
   end
 
-  describe 'inputting reservation information' do
+  xdescribe 'inputting reservation information' do
     let(:reserve_date) { Date.today.next_day }
     let(:reserve_term) { 1 }
     let(:headcount) { 1 }
@@ -81,7 +81,6 @@ RSpec.describe 'Reservation feature' do
     before { visit reservation_form_page_url }
     subject do
       find('#datePick').set reserve_date.strftime('%Y/%m/%d')
-      page.execute_script("$('.datepicker').hide()") # close datepicker
       find("#reserve_term option[value='#{reserve_term}']").select_option
       find("#headcount option[value='#{headcount}']").select_option
       if breakfast

@@ -94,20 +94,9 @@ describe 'visiting reservation form page' do
 
 # [演習3] ページオブジェクトにメソッドを定義しましょう
 
-ページオブジェクトにメソッドを定義して、以下のテストコードを修正しましょう。
+ページオブジェクトに予約するためのメソッドを定義して、以下のテストコードを修正しましょう。
 
 ```ruby
-describe 'visiting reservation form page' do
-  ## Use capybara
-  context 'when click on brand button' do
-```
-
-# [演習4] 期待通りに動かないテストへのアプローチ
-
-Seleniumを使ったテストでは書いているコードは正しそうなのに期待通りに動作しないということがあります。
-
-原因を見つけてテストが成功するようにテストコードを修正しましょう。
-
-```ruby
-xdescribe 'inputting reservation information' do
+RSpec.describe 'Reservation feature' do
+  describe 'inputting reservation information' do
 ```
